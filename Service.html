@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lamoon Style Header & Footer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: #111;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+    
+    /* Footer */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #003c39;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #003c39;
+      color: #ffffff;
+      padding: 60px 5% 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #c0ffb3;
+    }
+
+    .footer-logo-icon {
+      font-size: 2rem;
+      transform: rotate(-15deg);
+    }
+
+    .footer-description {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #c8e6e1;
+      max-width: 280px;
+    }
+
+    .footer-column h4 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #e0f7f4;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .footer-column a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #c8e6e1;
+    }
+
+    .footer-contact strong {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      padding-top: 20px;
+      font-size: 0.85rem;
+      color: #c8e6e1;
+    }
+
+    @media (max-width: 600px) {
+      .footer-logo {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        font-size: 0.8rem;
+      }
+
+      .footer-container {
+        text-align: center;
+      }
+    }
+
+/* <!-- Services --> */
+
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7f3;
+      color: #0d0d0d;
+    }
+
+    .services-section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .breadcrumb {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      border-top: 1px solid #ccc;
+      margin: 10px 0 30px;
+    }
+
+    .services-section h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .services-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      max-width: 700px;
+    }
+
+    @media (max-width: 768px) {
+      .services-section h1 {
+        font-size: 2rem;
+      }
+
+      .services-section p {
+        font-size: 1rem;
+      }
+    }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  .left {
+    flex: 1;
+  }
+  .left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .right p, ul li {
+      max-width: 100%;
+    }
+  }
+ body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #f8f8f8;
+  }
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    max-width: max-content;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  .right {
+    flex: 1;
+  }
+  .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column-reverse;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p, ul li {
+      max-width: 100%;
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #f8f8f8;
+  }
+  .left {
+    flex: 1;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    max-width: max-content;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p, ul li {
+      max-width: 100%;
+    }
+  }
+ body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #f8f8f8;
+  }
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .right {
+    flex: 1;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    max-width: max-content;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p, ul li {
+      max-width: 100%;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #f8f8f8;
+  }
+  .left {
+    flex: 1;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    object-fit: cover;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    max-width: max-content;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p, ul li {
+      max-width: 100%;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+  }
+  .left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    object-fit: cover;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #d3d3d3;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    max-width: max-content;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p, ul li {
+      max-width: 100%;
+    }
+  }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+  }
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .left img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    object-fit: cover;
+  }
+  .right {
+    flex: 1;
+    padding-left: 20px;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #d3d3d3;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    max-width: max-content;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p, ul li {
+      max-width: 100%;
+    }
+  }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #0d0d0d;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+  }
+  .left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .tag {
+    display: inline-block;
+    background-color: #d3d3d3;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    max-width: max-content;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 1rem;
+    max-width: 550px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    color: #0d0d0d;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    background-color: #0d3e3c;
+    color: #b2f29e;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .btn {
+    background-color: #b2f29e;
+    border: none;
+    color: #0d3e3c;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 6px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgb(178 242 158 / 0.8);
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #a0e38c;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    object-fit: cover;
+  }
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p, ul li {
+      max-width: 100%;
+    }
+  }
+body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f9f9f9;
+      color: #1d1d1f;
+      line-height: 1.6;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .left {
+      flex: 1;
+      padding-right: 40px;
+    }
+    .right {
+      flex: 1;
+    }
+    .tag {
+      background-color: #eee;
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      color: #444;
+    }
+    .step {
+      background-color: #f5f8f4;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .step h2 {
+      font-size: 24px;
+      margin: 0 0 10px;
+    }
+    .step span {
+      font-size: 32px;
+      color: #064b45;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+* {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('https://your-image-url.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 60px;
+      color: #fff;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .hero-content h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero-btn {
+      position: relative;
+      z-index: 2;
+      margin-top: 20px;
+    }
+    .hero-btn a {
+      background-color: #c0f5b6;
+      color: #000;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .hero-btn a:hover {
+      background-color: #a5e09b;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f7f7f7;
+      color: #111;
+    }
+    .clients-section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .tag {
+      display: inline-block;
+      background-color: #eaeaea;
+      color: #444;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .clients-section hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 20px 0;
+    }
+    .clients-section h2 {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    .clients-section p {
+      font-size: 16px;
+      color: #444;
+      max-width: 700px;
+    }
+ body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .testimonial {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      flex: 1 1 300px;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 300px;
+    }
+
+    .testimonial p {
+      font-size: 16px;
+      margin-bottom: auto;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .author img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .author-info {
+      font-size: 14px;
+    }
+
+    .author-info strong {
+      display: block;
+    }
+
+    .video-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 360px;
+      background-color: #eee;
+    }
+
+    .video-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #c7f5b3;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .play-button::before {
+      content: '▶';
+      font-size: 24px;
+      color: #222;
+    }
+
+    @media (max-width: 1000px) {
+      .testimonials {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f5f5f5;
+      padding: 40px;
+    }
+
+    .logo-strip {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .logo-strip .text {
+      font-size: 20px;
+      max-width: 180px;
+    }
+
+    .logo-strip .logos {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .logo-strip img {
+      height: 32px;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    .logo-strip img:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .logo-strip {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo-strip .text {
+        max-width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Lamoon</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="newblog.html">Blog</a>
+      <a href="newcontact.html">Contact</a>
+      <a href="newcareer.html">Careers</a>
+    </nav>
+  </header>
+
+<!-- Services -->
+ 
+
+  <section class="services-section">
+    <div class="breadcrumb">Home › Services</div>
+    <div class="divider"></div>
+
+    <h1>Expertise that empowers lasting success</h1>
+    <p>From high-level strategy to operational execution, our tailored solutions are designed to deliver measurable impact across every stage of your business.</p>
+  </section>
+
+
+  <div class="container">
+  <div class="left">
+    <img src="image/image copy 6.png" alt="Chessboard Strategy" />
+  </div>
+  <div class="right">
+    <div class="tag">Business strategy</div>
+    <h1>Clear, data-driven strategies to drive growth and competitive edge.</h1>
+    <p>
+      At Lamoon, we empower organizations to define their vision, build smarter strategies, and achieve long-term impact. Our business strategy services help leaders make clear decisions, unlock opportunities, and lead with purpose in an ever-changing market.
+    </p>
+    <ul>
+      <li>Strategic Planning</li>
+      <li>Business Model Development</li>
+      <li>Market &amp; Competitive Analysis</li>
+      <li>Vision &amp; Mission Refinement</li>
+      <li>Go-to-Market Strategy</li>
+      <li>Growth &amp; Expansion Strategy</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left">
+    <div class="tag">Operations optimization</div>
+    <h1>Streamlining processes to maximize efficiency and output.</h1>
+    <p>
+      At Lamoon, we help businesses unlock efficiency by rethinking how they operate. Our Operations Optimization services focus on improving systems, workflows, and resource utilization—so you can deliver more value with less waste.
+    </p>
+    <ul>
+      <li>Process Improvement</li>
+      <li>Performance Management</li>
+      <li>Operational Restructuring</li>
+      <li>Technology Enablement</li>
+      <li>Capacity &amp; Resource Optimization</li>
+      <li>Workflow Design</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+  <div class="right">
+    <img src="image/image copy 7.png" alt="Office workers on laptops" />
+  </div>
+</div>
+
+<div class="container">
+  <div class="left">
+    <img src="image/image copy 8.png" alt="Team meeting in conference room" />
+  </div>
+  <div class="right">
+    <div class="tag">Organizational development</div>
+    <h1>Shaping agile teams and future-ready leadership structures.</h1>
+    <p>
+      At Lamoon, we help organizations evolve from within. Our Organizational Development services focus on improving structure, culture, leadership, and performance—empowering your people and aligning your systems for sustainable success.
+    </p>
+    <ul>
+      <li>Leadership Development</li>
+      <li>Culture Transformation</li>
+      <li>Organizational Design</li>
+      <li>Internal Communication Strategy</li>
+      <li>Talent &amp; Capability Building</li>
+      <li>Change Readiness &amp; Alignment</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left">
+    <div class="tag">Innovation & growth</div>
+    <h1>Fueling new business models, markets, and value creation.</h1>
+    <p>
+      At Lamoon, we partner with organizations to ignite innovation and fuel growth. Our Innovation & Growth services help you generate new ideas, launch impactful initiatives, and scale opportunities for lasting market leadership.
+    </p>
+    <ul>
+      <li>Innovation Strategy</li>
+      <li>New Product Development</li>
+      <li>Growth Acceleration</li>
+      <li>Market Exploration & Validation</li>
+      <li>Partnership & Ecosystem Development</li>
+      <li>Agile Innovation Processes</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+  <div class="right">
+    <img src="image/image copy 9.png" alt="Person writing in notebook" />
+  </div>
+</div>
+<div class="container">
+  <div class="left">
+    <div class="tag">Market entry & expansion</div>
+    <h1>Guided strategies for launching into new regions or industries.</h1>
+    <p>
+      At Lamoon, we guide businesses through successful market entries and expansions. Whether you’re entering a new region or scaling existing operations, our tailored strategies help you minimize risk, maximize impact, and accelerate growth.
+    </p>
+    <ul>
+      <li>Market Research & Analysis</li>
+      <li>Entry Strategy Development</li>
+      <li>Regulatory & Compliance Advisory</li>
+      <li>Partnership & Alliance Building</li>
+      <li>Go-to-Market Execution Support</li>
+      <li>Growth Scaling & Optimization</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+  <div class="right">
+    <img src="image/image copy 10.png" alt="Stock market graph on screen" />
+  </div>
+</div>
+
+<div class="container">
+  <div class="left">
+    <div class="tag">Financial performance</div>
+    <h1>Smart budgeting, forecasting, and financial health planning.</h1>
+    <p>
+      At Lamoon, we help organizations improve their financial performance by analyzing, planning, and optimizing all aspects of financial management. Our approach ensures your business stays financially healthy and positioned for sustainable growth.
+    </p>
+    <ul>
+      <li>Financial Analysis & Reporting</li>
+      <li>Budgeting & Forecasting</li>
+      <li>Cost Management & Optimization</li>
+      <li>Profitability Improvement</li>
+      <li>Financial Controls & Risk Management</li>
+      <li>Cash Flow Management</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+  <div class="right">
+    <img src="image/image copy 11.png" alt="Business team reviewing documents" />
+  </div>
+</div>
+
+<div class="container">
+  <div class="left">
+    <img src="image/image copy 12.png" alt="Office workspace with people" />
+  </div>
+  <div class="right">
+    <div class="tag">Change management</div>
+    <h1>Smooth, structured transitions during periods of transformation.</h1>
+    <p>
+      At Lamoon, we guide organizations through change with strategies that minimize disruption and maximize adoption. Our Change Management services help you lead transitions smoothly while empowering your teams to embrace new ways of working.
+    </p>
+    <ul>
+      <li>Change Strategy & Planning</li>
+      <li>Stakeholder Engagement</li>
+      <li>Communication Management</li>
+      <li>Training & Capability Building</li>
+      <li>Adoption & Reinforcement</li>
+      <li>Change Impact Assessment</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left">
+    <div class="tag">Data & insights</div>
+    <h1>Unlocking clarity through analytics and performance insights.</h1>
+    <p>
+      At Lamoon, we empower organizations to harness the power of data. Our Data & Insights services help you collect, analyze, and interpret data to drive smarter decisions, optimize performance, and uncover new opportunities.
+    </p>
+    <ul>
+      <li>Data Strategy & Governance</li>
+      <li>Advanced Analytics</li>
+      <li>Business Intelligence Reporting</li>
+      <li>Customer & Market Insights</li>
+      <li>Data Automation & Integration</li>
+      <li>Training & Capability Building</li>
+    </ul>
+    <button class="btn">Learn more →</button>
+  </div>
+  <div class="right">
+    <img src="image/image copy 13.png" alt="Laptop with analytics dashboard" />
+  </div>
+</div>
+
+<div class="container">
+    <div class="left">
+      <div class="tag">How we work</div>
+      <h1>A Practical Approach.<br>Proven Results. Tailored for You.</h1>
+      <p>At Lamoon, we combine strategic thinking with hands-on execution. Our process is collaborative, data-driven, and fully aligned with your unique business context—ensuring we deliver outcomes that matter.</p>
+    </div>
+    <div class="right">
+      <div class="step">
+        <h2><span>01</span>Discover</h2>
+        <p>We begin with deep discovery—listening to your challenges, goals, and context. Through workshops, data analysis, and stakeholder input, we build a clear picture of your needs.</p>
+      </div>
+      <div class="step">
+        <h2><span>02</span>Design</h2>
+        <p>With insight in hand, we craft custom strategies and solutions. Every plan is practical, measurable, and aligned with your business goals—whether it's transformation, growth, or efficiency.</p>
+      </div>
+      <div class="step">
+        <h2><span>03</span>Deliver</h2>
+        <p>We work side–by–side with your team to implement solutions. From systems and processes to people and performance, we ensure smooth execution with minimal disruption.</p>
+      </div>
+      <div class="step">
+        <h2><span>04</span>Optimize</h2>
+        <p>We monitor results, gather feedback, and refine as we go—ensuring long–term success, agility, and scalability.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Let’s Build What’s<br>Next—Together</h1>
+    </div>
+    <div class="hero-btn">
+      <a href="#contact">Contact us →</a>
+    </div>
+  </section>
+<section class="clients-section">
+    <div class="tag">Our clients</div>
+    <hr />
+    <h2>Trusted by ambitious leaders and<br>forward-thinking organizations.</h2>
+    <p>We partner with businesses across industries — from emerging ventures to established enterprises — helping them navigate complexity, sharpen strategy, and accelerate results.</p>
+  </section>
+
+  <section class="testimonials">
+
+    <!-- Testimonial 1 -->
+    <div class="testimonial">
+      <p>“We came in with a messy strategy and left with a clear roadmap and aligned leadership team. Their strategic thinking was both practical and visionary.”</p>
+      <div class="author">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Amira Khalid">
+        <div class="author-info">
+          <strong>Amira Khalid</strong>
+          CEO, NovaPay Fintech
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial">
+      <p>“Their team quickly identified bottlenecks in our workflow and designed systems that actually work. We’re now running faster and smarter.”</p>
+      <div class="author">
+        <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Emily Chen">
+        <div class="author-info">
+          <strong>Emily Chen</strong>
+          Head of Operations, Axis Precision
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Testimonial -->
+    <div class="video-card">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Video testimonial">
+      <div class="play-button"></div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial">
+      <p>“We were going through a major restructuring, and their guidance was invaluable. They helped us lead with purpose, not panic.”</p>
+      <div class="author">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sofia Delgado">
+        <div class="author-info">
+          <strong>Sofia Delgado</strong>
+          Managing Director, CoreBridge B2B
+        </div>
+      </div>
+    </div>
+
+  </section>
+<div class="logo-strip">
+    <div class="text">
+      Trusted by 2200+<br>digital brands.
+    </div>
+    <div class="logos">
+      <img src="image/image copy 14.png" alt="Logo 1">
+      <img src="image/image copy 15.png" alt="Logo 2">
+      <img src="image/image copy 16.png" alt="Logo 3">
+      <img src="image/image copy 17.png" alt="Logo 4">
+      <img src="image/image copy 17.png" alt="Logo 5">
+      <img src="image/image copy 19.png" alt="Logo 6">
+      <img src="image/image copy 20.png" alt="Logo 7">
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Logo and Description -->
+      <div>
+        <div class="footer-logo">
+          <span class="footer-logo-icon">L</span>
+          <span>Lamoon</span>
+        </div>
+        <p class="footer-description">
+          Business clarity, operational excellence, and transformation support for leaders ready to grow with intention.
+        </p>
+      </div>
+
+     <!-- Company Links -->
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="newblog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="newcareer.html">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Service.html">Services</a></li>
+          <li><a href="newcontact.html">Contact</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Contact Info -->
+      <div class="footer-column footer-contact">
+        <h4>Contact us</h4>
+        <p>123 Business Street, Suite 456,<br>City, State, ZIP</p>
+        <strong>Email :</strong>
+        <p>support@lamoon.com</p>
+        <strong>Phone :</strong>
+        <p>+1 (212) 555-7890</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-column">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      Copyright © 2025 Lamoon. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

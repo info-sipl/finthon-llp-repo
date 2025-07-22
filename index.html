@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+          }
+
+    header {
+      background: #014421;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    /* .n{
+      color: #cba135;
+    } */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #caffc2;
+      text-decoration: none;
+    }
+
+    .logo span:first-child {
+      font-size: 1.6rem;
+      transform: rotate(-15deg);
+      margin-right: 6px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex: 1;
+      margin-left: 50px;
+    }
+
+    nav a {
+      color: #cba135;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .cta-btn {
+      background: #ffffff;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background: #e0e0e0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none; /* Hide nav on small screens, or implement mobile menu later */
+      }
+    }
+
+    /* Footer */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #003c39;
+      color: #ffffff;
+    }
+
+    footer {
+      background: #014421;
+      color: #f9f6f0;
+      padding: 60px 5% 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color:#caffc2;
+    }
+
+    .footer-logo-icon {
+      font-size: 2rem;
+      transform: rotate(-15deg);
+    }
+
+    .footer-description {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #cba135;
+      max-width: 280px;
+    }
+
+    .footer-column h4 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #f9f6f0;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .footer-column a {
+      color: #cba135;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #cba135;
+    }
+
+    .footer-contact strong {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      padding-top: 20px;
+      font-size: 0.85rem;
+      color: rgb(167, 240, 10);
+    }
+
+    @media (max-width: 600px) {
+      .footer-logo {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        font-size: 0.8rem;
+      }
+
+      .footer-container {
+        text-align: center;
+      }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Georgia', serif;
+      color: #fff;
+    }
+
+    .hero {
+      position: relative;
+      background-image: url("image/image.png"); /* Example image */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+    }
+
+    .overlay {
+      background: rgba(245,245,245,0.5);
+      padding: 40px;
+      max-width: 700px;
+    }
+
+    .tagline {
+      background: #014421;
+      color: white;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      font-size: 14px;
+      margin-left: 10px;
+      color: black;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 20px 0;
+      color: #ddd;
+      max-width: 600px;
+    }
+
+    .cta {
+      background: #014421;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cta:hover {
+      background: #f1f1f1;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+    }
+ body {
+      margin: 0;
+      padding: 60px;
+      font-family: 'Georgia', serif;
+      background: #f8f8f8;
+      color: #000;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    .label {
+      background: #014421;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .heading {
+      font-size: 48px;
+      font-weight: normal;
+      line-height: 1.2;
+      max-width: 600px;
+    }
+
+    .text {
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .heading {
+        font-size: 36px;
+      }
+    }
+     body {
+      font-family: 'Georgia', serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      margin: 0;
+    }
+    .grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card-content {
+      padding: 24px;
+    }
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .card-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+    .card-text {
+      font-size: 15px;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-footer {
+      padding: 0 24px 24px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      text-align: center;
+      background-color: #033b35;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      transition: background 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #022b25;
+    }
+body {
+      font-family: 'Georgia', serif;
+      background-color: #f7f7f7;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .card-grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #c4e4d4;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(236, 9, 9, 0.385);
+      width: 340px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .card-icon {
+      font-size: 26px;
+      color: #0e3a33;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 15px;
+      color: #530bef;
+      line-height: 1.4;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-footer {
+      padding: 0 24px 24px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      text-align: center;
+      background-color: #014421;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #062e26;
+    }
+
+     body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 60px 10%;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex: 1 1 45%;
+    }
+
+    .tag {
+      background-color: #014421;
+      color: white;
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .headline {
+      font-size: 3rem;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .right {
+      flex: 1 1 45%;
+      font-family: 'Arial', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #111;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .headline {
+        font-size: 2rem;
+      }
+    }
+
+     body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f9f9f9;
+    }
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .image-section {
+      flex: 1 1 400px;
+      position: relative;
+    }
+
+    .image-section img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .quote-box {
+      background: #caeab4;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: -100px;
+      max-width: 90%;
+      box-shadow: 0 8px 16px rgba(236, 9, 9, 0.579);
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-box p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
+
+    .quote-author {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .quote-author img {
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .content-section {
+      flex: 1 1 400px;
+      background: #d7f9e7;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(236, 9, 9, 0.579);
+    }
+
+    .accordion {
+      border-top: 1px solid #ccc;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-title {
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-content {
+      display: none;
+      padding-bottom: 20px;
+      color: #444;
+    }
+
+    .accordion-content.active {
+      display: block;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li::before {
+      content: '✔';
+      color: #014421;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .quote-box {
+        margin-top: -60px;
+      }
+    }
+body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #daf3ea;
+      padding: 40px;
+      color: #111;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: normal;
+      line-height: 1.3;
+      max-width: 900px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 900px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #014421;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .grid-item {
+      background: #70dca4;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .grid-item::before {
+      content: attr(data-number);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #014421;
+      color: rgb(8, 234, 174);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      font-size: 1rem;
+    }
+
+    .grid-item h3 {
+      margin-left: 40px;
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    .grid-item p {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<!-- Header -->
+  <header>
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <span>L</span> Lamoon
+    </a>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="newblog.html">Blog</a>
+      <a href="newcontact.html">Contact</a>
+      <a href="newcareer.html">Careers</a>
+    </nav>
+
+    <!-- Call-to-Action Button -->
+    <button class="cta-btn">Contact</button>
+  </header>
+
+<!-- Body -->
+<div class="hero">
+  <div class="overlay">
+    <div>
+      <span class="tagline">Best solution</span>
+      <span class="subtext">Empowering bold business moves</span>
+    </div>
+    <h1>Your strategy<br>partner in<br>business growth</h1>
+    <p>We partner with visionary leaders to unlock growth, navigate transformation, and build future-proof businesses through tailored corporate strategy and operational excellence.</p>
+    <a href="#" class="cta">Let’s Talk Strategy →</a>
+  </div>
+</div>
+<div class="section">
+  <div>
+    <div class="label">All in one services</div>
+    <h1 class="heading">Innovative solutions for real world challenges</h1>
+  </div>
+  <div class="text">
+    We deliver sharp, results-driven consulting across the core areas of business success.
+    Whether you're scaling, restructuring, or innovating — we're here to guide your next bold move.
+  </div>
+</div>
+<div class="grid">
+
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="card-content">
+      <div class="card-icon">🧠</div>
+      <div class="card-title">Business strategy</div>
+      <div class="card-text">Clear, data-driven strategies to drive growth and competitive edge.</div>
+    </div>
+    <img src="image/image copy 21.png" alt="Strategy Chess">
+    <div class="card-footer">
+      <a href="#" class="btn">Learn more →</a>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="card-content">
+      <div class="card-icon">⚙️</div>
+      <div class="card-title">Operations optimization</div>
+      <div class="card-text">Streamlining processes to maximize efficiency and output.</div>
+    </div>
+    <img src="image/image copy 22.png" alt="Team Working">
+    <div class="card-footer">
+      <a href="#" class="btn">Learn more →</a>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <div class="card-content">
+      <div class="card-icon">🏢</div>
+      <div class="card-title">Organizational development</div>
+      <div class="card-text">Shaping agile teams and future-ready leadership structures.</div>
+    </div>
+    <img src="image/image copy 23.png" alt="Office Discussion">
+    <div class="card-footer">
+      <a href="#" class="btn">Learn more →</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="card-grid">
+
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="card-content">
+      <div class="card-icon">🔬</div>
+      <div class="card-title">Innovation & growth</div>
+      <div class="card-text">Fueling new business models, markets, and value creation.</div>
+    </div>
+    <img src="image/image copy 24.png" alt="Innovation" />
+    <div class="card-footer">
+      <a href="#" class="btn">Learn more →</a>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="card-content">
+      <div class="card-icon">🌍</div>
+      <div class="card-title">Market entry & expansion</div>
+      <div class="card-text">Guided strategies for launching into new regions or industries.</div>
+    </div>
+    <img src="image/image copy 25.png" alt="Market Entry" />
+    <div class="card-footer">
+      <a href="#" class="btn">Learn more →</a>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <div class="card-content">
+      <div class="card-icon">📊</div>
+      <div class="card-title">Financial performance</div>
+      <div class="card-text">Smart budgeting, forecasting, and financial health planning.</div>
+    </div>
+    <img src="image/image copy 26.png" alt="Financial Planning" />
+    <div class="card-footer">
+      <a href="#" class="btn">Learn more →</a>
+    </div>
+  </div>
+
+</div>
+ <section class="section">
+    <div class="left">
+      <div class="tag">About us</div>
+      <h1 class="headline">Strategic minds. Real-world impact</h1>
+    </div>
+    <div class="right">
+      <p>
+        We’re a corporate consulting firm focused on helping businesses grow, streamline, and adapt. 
+        With deep industry experience and a sharp, practical approach, we guide companies through 
+        strategy, operations, and transformation.
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="image-section">
+      <img src="image/image copy 27.png" alt="Person reading book">
+      <div class="quote-box">
+        <p>“Great businesses aren’t built on ideas alone — they’re built on execution, discipline, and vision. That’s where we come in.”</p>
+        <div class="quote-author">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Founder">
+          <div>
+            <strong>Naliko Sermono</strong><br/>
+            The Founder
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-title" onclick="toggleAccordion(this)">
+            Strategic Precision <span>-</span>
+          </div>
+          <div class="accordion-content active">
+            <p>Our work goes beyond theory — we translate your business goals into focused, achievable action plans. With us, strategy is not a document; it’s a roadmap to measurable impact.</p>
+            <ul class="checklist">
+              <li>Every solution is grounded in research, analytics, and proven frameworks.</li>
+              <li>We align leadership around priorities that drive performance.</li>
+              <li>We focus on strategies that are both visionary and operationally sound.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title" onclick="toggleAccordion(this)">
+            Senior-Led Expertise <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>All projects are led by experienced senior consultants with deep industry knowledge.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title" onclick="toggleAccordion(this)">
+            Tailored Solutions <span>+</span>
+          </div>
+          <div class="accordion-content">
+            <p>We don’t use templates. Every solution is uniquely designed for your goals and context.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="badge">Our vision</div>
+
+  <h1>To be the trusted partner that enables businesses to grow with clarity, resilience, and purpose.</h1>
+
+  <p>
+    We envision a future where organizations of all sizes can navigate complexity with confidence.
+    Our mission is to empower leaders with the insight, structure, and strategies they need to drive
+    meaningful progress — not just in profits, but in performance, people, and long-term value.
+  </p>
+
+  <p>
+    We’re not just building a consulting firm. We’re building a standard for how businesses engage,
+    evolve, and lead in a fast-changing world.
+  </p>
+
+  <div class="grid">
+    <div class="grid-item" data-number="1">
+      <h3>Our Focus</h3>
+      <p>We concentrate on strategic clarity, operational excellence, and sustainable growth. Our work is grounded in real business needs, not theoretical models — and always aligned with long-term success.</p>
+    </div>
+
+    <div class="grid-item" data-number="2">
+      <h3>Our Approach</h3>
+      <p>We don’t believe in one-size-fits-all. Every engagement is customized to your context — co-created with your team to ensure buy-in, adoption, and results that last.</p>
+    </div>
+
+    <div class="grid-item" data-number="3">
+      <h3>Our Experience</h3>
+      <p>Our consultants bring experience from diverse industries and complex environments. We’ve led high-impact projects across growth, transformation, and performance — from startups to global enterprises.</p>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Logo and Description -->
+      <div>
+        <div class="footer-logo">
+          <span class="footer-logo-icon">L</span>
+          <span>Lamoon</span>
+        </div>
+        <p class="footer-description">
+          Business clarity, operational excellence, and transformation support for leaders ready to grow with intention.
+        </p>
+      </div>
+
+      <!-- Company Links -->
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="newblog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="newcareer.html">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Service.html">Services</a></li>
+          <li><a href="newcontact.html">Contact</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-column footer-contact">
+        <h4>Contact us</h4>
+        <p>123 Business Street, Suite 456,<br>City, State, ZIP</p>
+        <strong>Email :</strong>
+        <p>support@lamoon.com</p>
+        <strong>Phone :</strong>
+        <p>+1 (212) 555-7890</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-column">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      Copyright © 2025 Lamoon. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function toggleAccordion(element) {
+      const content = element.nextElementSibling;
+      const isActive = content.classList.contains('active');
+      document.querySelectorAll('.accordion-content').forEach(el => {
+        el.classList.remove('active');
+        el.previousElementSibling.querySelector('span').textContent = '+';
+      });
+
+      if (!isActive) {
+        content.classList.add('active');
+        element.querySelector('span').textContent = '-';
+      }
+    }
+  </script>
+
+</body>
+</html>

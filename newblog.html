@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style> @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgb(5, 5, 92);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: #111;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    
+    /* Footer */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #003c39;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #003c39;
+      color: #ffffff;
+      padding: 60px 5% 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #c0ffb3;
+    }
+
+    .footer-logo-icon {
+      font-size: 2rem;
+      transform: rotate(-15deg);
+    }
+
+    .footer-description {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #c8e6e1;
+      max-width: 280px;
+    }
+
+    .footer-column h4 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #e0f7f4;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .footer-column a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #c8e6e1;
+    }
+
+    .footer-contact strong {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      padding-top: 20px;
+      font-size: 0.85rem;
+      color: #c8e6e1;
+    }
+
+    @media (max-width: 600px) {
+      .footer-logo {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        font-size: 0.8rem;
+      }
+
+      .footer-container {
+        text-align: center;
+      }
+    }
+    </style>
+
+
+  <title>Blog Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Header -->
+   <header>
+    <div class="logo">Lamoon</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="newblog.html">Blog</a>
+      <a href="newcontact.html">Contact</a>
+      <a href="newcareer.html">Careers</a>
+    </nav>
+  </header>
+
+  <!-- Page Content Placeholder
+  <main style="padding: 4rem 2rem; text-align:center;">
+    <h1>Welcome to Lamoon-Inspired Page</h1>
+    <p>This is where your content would go. Try resizing the screen!</p>
+  </main> -->
+
+
+
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Breadcrumb -->
+    <div class="text-sm text-gray-600 mb-4">
+      <a href="#" class="hover:underline text-gray-800">Home</a>
+      <span class="mx-1">></span>
+      <span>Blog</span>
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-gray-300 mb-6">
+
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-5xl font-serif font-semibold text-gray-900 mb-4">
+      Perspectives that drive progress
+    </h1>
+
+    <!-- Subtext -->
+    <p class="text-lg text-gray-700 max-w-2xl">
+      We share our latest thoughts on business strategy, operational excellence,
+      market trends, and the human side of transformation to help you lead with
+      clarity and confidence.
+    </p>
+
+      <!-- Blog Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="image/blog1.png" alt="Blog 1" class="w-full h-64 object-cover">
+        <div class="p-5">
+          <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+            <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Inspiration</span>
+            <span>Feb 21, 2024</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Innovative Marketing Strategies for Small Businesses</h3>
+          <p class="text-sm text-gray-700">
+            Learn about innovative marketing strategies tailored for small businesses to stand out, attract customers, and grow.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="image/blog2.png" alt="Blog 2" class="w-full h-64 object-cover">
+        <div class="p-5">
+          <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+            <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Creative</span>
+            <span>Feb 18, 2024</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">The Importance of Diversity and Inclusion in Today's Workplace</h3>
+          <p class="text-sm text-gray-700">
+            Delve into the significance of fostering diversity and inclusion in the workplace, driving innovation, creativity, and growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="image/blog3.png" alt="Blog 3" class="w-full h-64 object-cover">
+        <div class="p-5">
+          <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+            <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Innovation</span>
+            <span>Feb 15, 2024</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Mastering Time Management: Tips for Busy Professionals</h3>
+          <p class="text-sm text-gray-700">
+            Discover practical time management tips and techniques to enhance productivity and prioritize tasks effectively.
+          </p>
+        </div>
+      </div>
+      <!-- Blog Card 4 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="image/blog4.png" alt="The Future of AI" class="w-full h-64 object-cover">
+        <div class="p-5">
+          <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+            <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Inspiration</span>
+            <span>Feb 13, 2024</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">The Future of AI: Opportunities and Challenges</h3>
+          <p class="text-sm text-gray-700">
+            Explore the transformative potential of AI technology, along with the opportunities it presents and the challenges it brings.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 5 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="image/blog5.png" alt="Building Resilience" class="w-full h-64 object-cover">
+        <div class="p-5">
+          <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+            <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Creative</span>
+            <span>Feb 11, 2024</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Strategies for Building a Resilient Business</h3>
+          <p class="text-sm text-gray-700">
+            Gain insights into resilience-building strategies that enable businesses to adapt, thrive, and overcome uncertainty.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 6 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <img src="image/blog6.png" alt="Effective Communication" class="w-full h-64 object-cover">
+        <div class="p-5">
+          <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+            <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Innovation</span>
+            <span>Feb 1, 2024</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">The Art of Effective Communication in the Workplace</h3>
+          <p class="text-sm text-gray-700">
+            Learn the art of clear and impactful communication, essential for fostering collaboration, trust, and productivity.
+          </p>
+        </div>
+      </div>
+      <!-- Blog Card 7 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="image/blog7.png" alt="Digital Transformation" class="w-full h-64 object-cover">
+      <div class="p-5">
+        <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+          <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Innovation</span>
+          <span>Jan 21, 2024</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Digital Transformation: Navigating the New Normal</h3>
+        <p class="text-sm text-gray-700">
+          Navigate the digital landscape with insights on digital transformation strategies, tools, and trends shaping business today.
+        </p>
+      </div>
+    </div>
+
+    <!-- Blog Card 8 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="image/blog8.png" alt="Remote Teams" class="w-full h-64 object-cover">
+      <div class="p-5">
+        <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+          <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Inspiration</span>
+          <span>Jan 7, 2024</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Unlocking the Secrets of Successful Remote Teams</h3>
+        <p class="text-sm text-gray-700">
+          Discover the strategies and best practices for building and managing successful remote teams, ensuring productivity and collaboration.
+        </p>
+      </div>
+    </div>
+
+    <!-- Blog Card 9 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="image/blog9.png" alt="Emotional Intelligence" class="w-full h-64 object-cover">
+      <div class="p-5">
+        <div class="flex items-center space-x-2 text-sm text-gray-500 mb-2">
+          <span class="bg-gray-200 px-2 py-0.5 rounded-full text-xs">Creative</span>
+          <span>Jan 2, 2024</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">The Power of Emotional Intelligence in Leadership</h3>
+        <p class="text-sm text-gray-700">
+          Explore how emotional intelligence can transform leadership dynamics, foster strong team connections, and improve outcomes.
+        </p>
+      </div>
+    </div>
+
+     
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Logo and Description -->
+      <div>
+        <div class="footer-logo">
+          <span class="footer-logo-icon">L</span>
+          <span>Lamoon</span>
+        </div>
+        <p class="footer-description">
+          Business clarity, operational excellence, and transformation support for leaders ready to grow with intention.
+        </p>
+      </div>
+
+      <!-- Company Links -->
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="newblog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="newcareer.html">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Service.html">Services</a></li>
+          <li><a href="newcontact.html">Contact</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Contact Info -->
+      <div class="footer-column footer-contact">
+        <h4>Contact us</h4>
+        <p>123 Business Street, Suite 456,<br>City, State, ZIP</p>
+        <strong>Email :</strong>
+        <p>support@lamoon.com</p>
+        <strong>Phone :</strong>
+        <p>+1 (212) 555-7890</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-column">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      Copyright © 2025 Lamoon. All rights reserved.
+    </div>
+  </footer>
+
+
+
+</body>
+</html>
+
+
+

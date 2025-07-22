@@ -1,0 +1,409 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lamoon Hero Banner</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f5f5;
+      color: #111;
+    }
+
+    .hero {
+      padding: 8rem 2rem 6rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      color: #2e2e2e;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #555;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Crafted with Calm and Clarity</h1>
+    <p>Discover a mindful approach to modern design—elegant, functional, and visually soothing. Built for creators who value simplicity.</p>
+  </section>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finthon LLP - Hero Banner</title>
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgb(5,5,92);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #111;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .cta button {
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .btn-started {
+      background: #111;
+      color: white;
+    }
+
+    .btn-talk {
+      background: #eaeaea;
+      color: #111;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .nav, .cta {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f0f0f0;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .footer-links, .newsletter, .social {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .footer-links h4,
+    .newsletter h4 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #444;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: #000;
+    }
+
+    .newsletter input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter button {
+      padding: 0.75rem 1rem;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .social-icons a:hover {
+      color: #000;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+    }
+
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(135deg, #e3f2ff, #f6faff);
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 600;
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      color: rgb(5, 5, 92);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-buttons button {
+      padding: 0.9rem 1.4rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color:rgb(5, 5, 92);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #333;
+    }
+
+    .btn-secondary {
+      background-color: rgb(5, 5, 92);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: #cfcfcf;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-buttons button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- HEADER -->
+  <header>
+    <div class="logo">Finthon LLP</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="Service.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="newcontact.html">Contact</a>
+      <a href="#">Login/Register</a>
+    </nav>
+    <div class="cta">
+      <button class="btn-started">Get Started</button>
+      <button class="btn-talk">Talk to AI Assistant</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT PLACEHOLDER
+  <main style="padding: 4rem 2rem; text-align:center;">
+    <h1>Welcome to Finthon LLP</h1>
+    <p>Start building smart, ethical AI solutions with us.</p>
+  </main> -->
+
+
+
+
+
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <h1 class="h1">Empowering Your Growth with AI-Driven Support</h1>
+    <p> From education to enterprise, Finthon LLP simplifies it all.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary">Explore Services</button>
+      <button class="btn-secondary">Chat with AI Assistant</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <!-- <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+
+      <div class="newsletter">
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Your Email" />
+        <button>Subscribe</button>
+      </div>
+
+      <div class="social">
+        <h4>Connect with Us</h4>
+        <div class="social-icons">
+          <a href="#">🌐</a>
+          <a href="#">🐦</a>
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2025 Finthon LLP. All rights reserved.
+    </div>
+  </footer> -->
+
+
+
+</body>
+</html>

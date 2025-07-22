@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lamoon Style Header & Footer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: #111;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Footer */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #003c39;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #003c39;
+      color: #ffffff;
+      padding: 60px 5% 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #c0ffb3;
+    }
+
+    .footer-logo-icon {
+      font-size: 2rem;
+      transform: rotate(-15deg);
+    }
+
+    .footer-description {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #c8e6e1;
+      max-width: 280px;
+    }
+
+    .footer-column h4 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #e0f7f4;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .footer-column a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #c8e6e1;
+    }
+
+    .footer-contact strong {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      padding-top: 20px;
+      font-size: 0.85rem;
+      color: #c8e6e1;
+    }
+
+    @media (max-width: 600px) {
+      .footer-logo {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        font-size: 0.8rem;
+      }
+
+      .footer-container {
+        text-align: center;
+      }
+    }
+
+    /* About  */
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7f4;
+      color: #111;
+    }
+
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 60px 5%;
+      align-items: center;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .about-text h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    .about-text a.button {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .about-text a.button:hover {
+      background-color: #333;
+    }
+
+    .about-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+      gap: 16px;
+    }
+
+    .about-images img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+
+    @media (max-width: 900px) {
+      .about-section {
+        grid-template-columns: 1fr;
+      }
+
+      .about-text h1 {
+        font-size: 2.4rem;
+      }
+
+      .about-images {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .about-images {
+        grid-template-columns: 1fr;
+      }
+
+      .about-text h1 {
+        font-size: 2rem;
+      }
+    }
+
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    .team-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 60px 5%;
+      align-items: center;
+    }
+
+    .team-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .team-content h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    .team-content p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .team-content h3 {
+      margin-top: 30px;
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: start;
+      font-size: 1.05rem;
+      color: #222;
+    }
+
+    .checklist li::before {
+      content: "✔";
+      color: #007A5E;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 900px) {
+      .team-section {
+        grid-template-columns: 1fr;
+      }
+
+      .team-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .team-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .checklist li {
+        font-size: 1rem;
+      }
+    }
+
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #111;
+    }
+
+    .mission-section {
+      background: #1a1a1a url("") no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px 160px;
+      position: relative;
+      text-align: center;
+    }
+
+    .mission-section h3 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .mission-section h1 {
+      font-size: 2rem;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .mission-section p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .mission-card {
+      background: #ffffff;
+      color: #000000;
+      max-width: 1000px;
+      margin: -100px auto 60px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      padding: 40px 30px;
+    }
+
+    .mission-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .mission-columns > div {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .mission-columns h4 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .mission-columns p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .mission-image {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .mission-image img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #d4ffcf;
+      color: #111;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: #c1f3bb;
+    }
+
+    @media (max-width: 768px) {
+      .mission-section h1 {
+        font-size: 1.6rem;
+      }
+
+      .mission-card {
+        padding: 30px 20px;
+      }
+
+      .mission-columns {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mission-columns > div {
+        max-width: 100%;
+      }
+    }    
+ * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f8f8;
+      color: #111;
+    }
+
+    .team-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .team-section h3 {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .team-section h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .team-section p {
+      max-width: 700px;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card-box {
+      background: #caffa5;
+      padding: 25px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-box p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .card-box a {
+      background: #093024;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 0.9rem;
+      transition: background 0.2s ease;
+    }
+
+    .card-box a:hover {
+      background: #0b4031;
+    }
+
+    .team-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .team-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .linkedin-icon {
+      position: absolute;
+      bottom: 60px;
+      left: 12px;
+      background: black;
+      color: white;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .member-info {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      background: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      width: calc(100% - 24px);
+      font-size: 0.9rem;
+    }
+
+    .member-info strong {
+      display: block;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .team-section h1 {
+        font-size: 1.6rem;
+      }
+    }
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .about__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about__image {
+    order: -1;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Lamoon</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Service.html">Service</a>
+      <a href="newblog.html">Blog</a>
+      <a href="newcontact.html">Contact</a>
+      <a href="newcareer.html">Careers</a>
+    </nav>
+  </header>
+
+<!--About-->
+
+ <section class="about-section">
+    <!-- Left Text Column -->
+    <div class="about-text">
+      <div class="breadcrumb">Home &gt; About Us</div>
+      <h1>Strategy. Clarity.<br>Results.</h1>
+      <p>
+        From ambitious startups to established enterprises, we collaborate with leaders to solve complex challenges, shape focused strategies, and build operational systems that scale.
+      </p>
+      <a href="#" class="button">Our Services →</a>
+    </div>
+
+    <!-- Right Image Grid -->
+    <div class="about-images">
+      <img src="image/image.png" alt="Team discussion">
+      <img src="image/image copy.png" alt="Woman speaking">
+      <img src="image/image copy 3.png" alt="Startup work">
+      <img src="image/image copy 2.png" alt="Team meeting">
+    </div>
+  </section>
+
+<!-- Our Team Section -->
+  <section class="team-section">
+    <!-- Left Image -->
+    <img src="image/image copy 4.png" alt="Team working together" />
+
+    <!-- Right Content -->
+    <div class="team-content">
+      <h1>A Team of Thinkers, Builders, and Business Partners</h1>
+      <p>Our strength lies in bridging sharp insight with grounded execution — helping leaders make smart decisions and build systems that last.</p>
+      <p>We don’t just advise from the sidelines. We roll up our sleeves and work alongside our clients to solve what matters most, from big-picture strategy to operational detail.</p>
+
+      <h3>What Sets Us Apart:</h3>
+      <ul class="checklist">
+        <li>Our team brings insights from corporate leadership, startups, and consulting — allowing us to see challenges from multiple angles.</li>
+        <li>We focus on outcomes, not just ideas. Every recommendation is tied to real-world implementation and measurable progress.</li>
+        <li>We customize every engagement, listen deeply, and work as true partners in your business journey.</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- Mission Section -->
+  <section class="mission-section">
+    <h3>Our missions</h3>
+    <h1>Driving clarity, enabling growth, and<br> empowering transformation.</h1>
+    <p>
+      At Lamoon, our mission is to help businesses unlock their full potential through strategic insight, operational excellence, and meaningful partnerships.
+    </p>
+  </section>
+
+  <!-- Mission Card -->
+  <div class="mission-card">
+
+    <!-- Columns -->
+    <div class="mission-columns">
+      <div>
+        <h4>Empower Leaders</h4>
+        <p>We equip decision-makers with clarity, confidence, and practical tools to lead effectively.</p>
+      </div>
+      <div>
+        <h4>Elevate Business Performance</h4>
+        <p>We help organizations improve efficiency, scale sustainably, and deliver long–term value.</p>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="mission-image">
+      <img src="image/image copy 5.png" alt="Notebook and laptop on desk">
+    </div>
+
+    <!-- CTA -->
+    <a href="#" class="cta-button">Explore our services →</a>
+  </div>
+
+<section class="team-section">
+    <h3>Our teams</h3>
+    <h1>Experts Who Think Strategically and<br>Deliver Practically</h1>
+    <p>We bring together sharp business thinking, real-world leadership, and a hands-on approach to help our clients achieve measurable results.</p>
+
+    <div class="team-grid">
+      <!-- Green card -->
+      <div class="card-box">
+        <p>Our team brings a unique blend of industry experience, cultural fluency, and business insight to every engagement. Together, we solve complex problems and help our clients grow with purpose.</p>
+        <a href="#">Learn more →</a>
+      </div>
+
+      <!-- Team member 1 -->
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Sophia Bennett">
+        <a href="#" class="linkedin-icon">in</a>
+        <div class="member-info">
+          <strong>Sophia Bennett</strong>
+          <small>Managing Partner</small>
+        </div>
+      </div>
+
+      <!-- Team member 2 -->
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1614287689302-7c1e3bafd2cd" alt="Liam Chen">
+        <a href="#" class="linkedin-icon">in</a>
+        <div class="member-info">
+          <strong>Liam Chen</strong>
+          <small>Director of Operations</small>
+        </div>
+      </div>
+
+      <!-- Team member 3 -->
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=634&q=80" alt="Isabelle Moreau">
+        <a href="#" class="linkedin-icon">in</a>
+        <div class="member-info">
+          <strong>Isabelle Moreau</strong>
+          <small>Principal Consultant</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Logo and Description -->
+      <div>
+        <div class="footer-logo">
+          <span class="footer-logo-icon">L</span>
+          <span>Lamoon</span>
+        </div>
+        <p class="footer-description">
+          Business clarity, operational excellence, and transformation support for leaders ready to grow with intention.
+        </p>
+      </div>
+
+      <!-- Company Links -->
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="newblog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="newcareer.html">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Service.html">Services</a></li>
+          <li><a href="newcontact.html">Contact</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Contact Info -->
+      <div class="footer-column footer-contact">
+        <h4>Contact us</h4>
+        <p>123 Business Street, Suite 456,<br>City, State, ZIP</p>
+        <strong>Email :</strong>
+        <p>support@lamoon.com</p>
+        <strong>Phone :</strong>
+        <p>+1 (212) 555-7890</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-column">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      Copyright © 2025 Lamoon. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
